@@ -27,25 +27,25 @@ const profitScreenshots = [
     id: 1,
     title: "Consistency",
     tag: "Disciplined execution",
-    image: "/assets/WhatsApp Image 2026-03-08 at 5.05.01 PM (1).jpeg",
+    image: "/assets/IMG_9620.PNG",
   },
   {
     id: 2,
     title: "Session Accuracy",
     tag: "Structured entries",
-    image: "/assets/WhatsApp Image 2026-03-08 at 5.05.01 PM.jpeg",
+    image: "/assets/IMG_9617.PNG",
   },
   {
     id: 3,
     title: "Controlled Growth",
     tag: "Risk-first approach",
-    image: "/assets/WhatsApp Image 2026-03-08 at 5.11.30 PM (1).jpeg",
+    image: "/assets/IMG_9612.PNG",
   },
   {
     id: 4,
     title: "Execution Quality",
     tag: "Clean review process",
-    image: "/assets/WhatsApp Image 2026-03-08 at 5.11.30 PM.jpeg",
+    image: "/assets/IMG_9623.PNG",
   },
 ];
 
@@ -315,6 +315,8 @@ function SpiderLogoPreloader() {
     </>
   );
 }
+
+
 
 function MagneticButton({
   children,
@@ -805,6 +807,10 @@ function HeroFluidReveal() {
 }
 
 export default function Page() {
+  // Full-page glass lens effect (click/touch)
+  // Render the effect component at top-level so it applies across the page
+  // (component is client-only and manages its own DOM injection)
+  
   const [showPreloader, setShowPreloader] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -952,6 +958,7 @@ export default function Page() {
       ref={rootRef}
       className="relative min-h-screen bg-[#000] text-white selection:bg-red-700/30 selection:text-white"
     >
+    
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <FullPageConstellationBackground />
       </div>
@@ -1092,7 +1099,7 @@ export default function Page() {
           className="reveal-section mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20 lg:px-8"
         >
           <div className="mb-10 max-w-2xl md:mb-12">
-            <SectionLabel>Section 02 / Profit Proof</SectionLabel>
+            <SectionLabel>Profit Proof</SectionLabel>
             <h2 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl md:text-5xl">
               Results that look structured, not noisy.
             </h2>
@@ -1153,7 +1160,7 @@ export default function Page() {
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-contain object-center block bg-black"
                         />
                         <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.66),transparent_45%)]" />
                         <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3 sm:bottom-5 sm:left-5 sm:right-5 sm:gap-4">
@@ -1187,7 +1194,7 @@ export default function Page() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain object-center block bg-black"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.72),transparent_45%)]" />
                 </div>
@@ -1234,7 +1241,7 @@ export default function Page() {
             />
 
             <div className="relative z-10 mb-8 max-w-2xl md:mb-10">
-              <SectionLabel>Section 03 / Student Achievements</SectionLabel>
+              <SectionLabel>Student Achievements</SectionLabel>
               <h2 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl md:text-5xl">
                 A moving wall of proof and progress.
               </h2>
@@ -1291,7 +1298,7 @@ export default function Page() {
         >
           <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-4 sm:p-5 md:rounded-[36px] md:p-8 lg:p-10">
             <div className="mb-8 max-w-2xl md:mb-10">
-              <SectionLabel>Section 04 / Spidey Edge</SectionLabel>
+              <SectionLabel>Spidey Edge</SectionLabel>
               <h2 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl md:text-5xl">
                 A strategy revealed like a process, not a promise.
               </h2>
@@ -1376,7 +1383,7 @@ export default function Page() {
           className="reveal-section mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20 lg:px-8"
         >
           <div className="mb-8 max-w-2xl md:mb-10">
-            <SectionLabel>Section 05 / RiskOra</SectionLabel>
+            <SectionLabel>RiskOra</SectionLabel>
             <h2 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl md:text-5xl">
               A product layer that turns trades into data.
             </h2>
@@ -1492,7 +1499,7 @@ export default function Page() {
           className="reveal-section mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20 lg:px-8"
         >
           <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-4 sm:p-5 md:rounded-[36px] md:p-8 lg:p-10">
-            <SectionLabel>Section 06 / Mentorship</SectionLabel>
+            <SectionLabel>Mentorship</SectionLabel>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1564,7 +1571,7 @@ export default function Page() {
           }}
         >
           <div className="mx-auto max-w-3xl text-center">
-            <SectionLabel>Section 07 / Payment</SectionLabel>
+            <SectionLabel>Payment</SectionLabel>
             <h2 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl md:text-5xl">
               Join the next batch with a clean final CTA.
             </h2>
@@ -1595,8 +1602,8 @@ export default function Page() {
                     {pricingDetails.price}
                   </div>
                   <div className="mt-4 text-sm leading-7 text-zinc-400">
-                    Replace this with batch date, payment method, WhatsApp
-                    number, Instagram, and course inclusion details.
+                  
+                
                   </div>
 
                   <div className="mt-6 space-y-3 md:mt-8">
